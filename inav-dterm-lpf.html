@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="INAV D-term pre-differentiation LPF experiment for reducing gyro noise amplification, with upstream PR and flight-test requests.">
+    <link rel="canonical" href="https://19379353560.github.io/inav-dterm-lpf.html">
+    <meta property="og:title" content="INAV D-term Pre-Differentiation LPF">
+    <meta property="og:description" content="Optional pre-diff LPF for INAV D-term input, with green CI and flight-test data requests.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://19379353560.github.io/inav-dterm-lpf.html">
+    <meta property="og:image" content="https://raw.githubusercontent.com/19379353560/inav/master/assets/cover.svg">
+    <title>INAV D-term Pre-Differentiation LPF</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">FPV Flight-Control Lab</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/#projects">Projects</a>
+        <a href="/#feedback">Feedback</a>
+        <a href="https://github.com/19379353560">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-hero">
+        <div>
+          <p class="eyebrow">Firmware</p>
+          <h1>INAV D-term pre-differentiation LPF work needs flight logs.</h1>
+          <p class="lead">An optional filter that smooths gyro input before differentiation, reducing high-frequency noise amplification while keeping the feature disabled by default for review.</p>
+          <a class="back-link" href="/">Back to project matrix</a>
+        </div>
+        <img src="https://raw.githubusercontent.com/19379353560/inav/master/assets/cover.svg" alt="INAV firmware experiment technical banner">
+      </section>
+
+      <section class="detail-layout">
+        <div class="detail-main">
+          <article class="detail-block">
+            <h2>Current PR State</h2>
+            <p>The active upstream pull request is #11464. The latest checks are green, `dterm_lpf2_hz` defaults to 0, and filter re-init now starts from the current gyro rate to avoid a one-cycle D-term spike.</p>
+          </article>
+
+          <article class="detail-block">
+            <h2>What Needs Flight Testing</h2>
+            <ul>
+              <li>Blackbox logs with `dterm_lpf2_hz` disabled and enabled.</li>
+              <li>Comparisons around disabled, 200Hz, and 250Hz.</li>
+              <li>Motor temperature notes after hover and active flight.</li>
+              <li>Unexpected behavior when changing PID/filter profiles.</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="detail-side">
+          <div class="stat-list">
+            <div><strong>PR</strong>#11464</div>
+            <div><strong>Default</strong>Disabled</div>
+            <div><strong>Need</strong>Blackbox logs</div>
+          </div>
+          <div class="link-list">
+            <a href="https://github.com/iNavFlight/inav/pull/11464">Upstream PR</a>
+            <a href="https://github.com/iNavFlight/inav/discussions/11463">INAV discussion</a>
+            <a href="https://github.com/19379353560/inav/issues/1">Flight-test issue</a>
+            <a href="https://github.com/19379353560/inav/discussions/2">Discussion</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>19379353560 · FPV flight-control hardware and INAV experiments</span>
+      <a href="https://github.com/19379353560">github.com/19379353560</a>
+    </footer>
+  </body>
+</html>
