@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FPV flight-control hardware, INAV firmware experiments, and Blackbox-based PID/filter tuning tools by 19379353560.">
+    <meta property="og:title" content="FPV Flight-Control Lab">
+    <meta property="og:description" content="Open FPV hardware, INAV firmware experiments, and Blackbox-based tuning tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://19379353560.github.io/">
+    <meta property="og:image" content="https://19379353560.github.io/assets/profile-cover.svg">
+    <title>FPV Flight-Control Lab</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="FPV Flight-Control Lab home">FPV Flight-Control Lab</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#feedback">Feedback</a>
+        <a href="https://github.com/19379353560">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="intro-copy">
+          <p class="eyebrow">FPV hardware · INAV firmware · Blackbox tuning</p>
+          <h1 id="intro-title">Flight-control projects built around real firmware, PCB files, and logs.</h1>
+          <p class="lead">
+            Open STM32H743 flight-controller hardware, a 75A 4-in-1 ESC design,
+            INAV D-term filtering experiments, and a Blackbox-based PID tuning tool.
+          </p>
+          <div class="actions" aria-label="Primary links">
+            <a class="button primary" href="https://github.com/19379353560">GitHub Profile</a>
+            <a class="button secondary" href="#projects">View Projects</a>
+          </div>
+        </div>
+        <img class="intro-image" src="assets/profile-cover.svg" alt="Technical banner for FPV flight-control hardware and firmware projects">
+      </section>
+
+      <section id="projects" class="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Project Matrix</p>
+          <h2 id="projects-title">Built for review, reuse, and field feedback.</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project">
+            <img src="assets/skypilot-cover.svg" alt="SkyPilot H743 flight controller technical illustration">
+            <div class="project-body">
+              <p class="tag">Open hardware</p>
+              <h3>SkyPilot H743</h3>
+              <p>STM32H743 flight-controller hardware for INAV with ICM42688P IMU, firmware files, and EasyEDA Pro project data.</p>
+              <ul>
+                <li>INAV 9.0.1 firmware files</li>
+                <li>PCB project and hardware notes</li>
+                <li>IMU DRDY and vibration-isolation review wanted</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/19379353560/skypilot">Repository</a>
+                <a href="https://github.com/19379353560/skypilot/issues/new/choose">Give feedback</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="assets/esc-cover.svg" alt="75A 4-in-1 ESC technical illustration">
+            <div class="project-body">
+              <p class="tag red">Hardware design</p>
+              <h3>75A 4-in-1 ESC</h3>
+              <p>10-layer FPV ESC board with Gerber manufacturing archive, schematic PDF, PCB previews, and DSHOT600 notes.</p>
+              <ul>
+                <li>75A x4 design target</li>
+                <li>Infineon gate-driver based MOSFET control</li>
+                <li>High-current and thermal review wanted</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/19379353560/DIY_Flight_Controller_and_4in1_ESC">Repository</a>
+                <a href="https://github.com/19379353560/DIY_Flight_Controller_and_4in1_ESC/issues/new/choose">Give feedback</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="assets/pid-tuner-cover.svg" alt="INAV PID Tuner chart illustration">
+            <div class="project-body">
+              <p class="tag blue">Blackbox tool</p>
+              <h3>INAV PID Tuner</h3>
+              <p>FastAPI web tool for analyzing INAV Blackbox logs and turning metrics into cautious PID/filter suggestions.</p>
+              <ul>
+                <li>Accepts `.bbl` and `.bfl` logs</li>
+                <li>Extracts PID error, D-term noise, and gyro noise</li>
+                <li>Example logs and rule suggestions wanted</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/19379353560/inav-pid-tuner">Repository</a>
+                <a href="https://github.com/19379353560/inav-pid-tuner/issues/new/choose">Share logs</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="assets/inav-cover.svg" alt="INAV firmware experiment technical illustration">
+            <div class="project-body">
+              <p class="tag orange">Firmware</p>
+              <h3>INAV Experiments</h3>
+              <p>D-term pre-differentiation LPF work, scheduler cleanup, sensor-chain cleanup, and SkyPilot H743 target support.</p>
+              <ul>
+                <li>Upstream PRs opened for INAV review</li>
+                <li>D-term filtering default and naming feedback wanted</li>
+                <li>Flight logs on noisy frames wanted</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/19379353560/inav">Repository</a>
+                <a href="https://github.com/iNavFlight/inav/pull/11464">Upstream PR</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="feedback" class="feedback" aria-labelledby="feedback-title">
+        <div>
+          <p class="eyebrow">Feedback Wanted</p>
+          <h2 id="feedback-title">The most useful feedback is specific and testable.</h2>
+        </div>
+        <div class="feedback-list">
+          <a href="https://github.com/19379353560/skypilot/issues/new/choose">PCB layout and IMU wiring review</a>
+          <a href="https://github.com/19379353560/DIY_Flight_Controller_and_4in1_ESC/issues/new/choose">ESC thermal and high-current routing review</a>
+          <a href="https://github.com/19379353560/inav-pid-tuner/issues/new/choose">INAV Blackbox logs and tuning-rule suggestions</a>
+          <a href="https://github.com/19379353560/inav/issues/new/choose">D-term filtering flight logs and firmware review</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>19379353560 · FPV flight-control hardware and INAV experiments</span>
+      <a href="https://github.com/19379353560">github.com/19379353560</a>
+    </footer>
+  </body>
+</html>
