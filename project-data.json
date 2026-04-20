@@ -1,0 +1,37 @@
+{
+  "name": "FPV Flight-Control Lab",
+  "url": "https://19379353560.github.io/",
+  "github": "https://github.com/19379353560",
+  "summary": "Open FPV flight-controller hardware, a 75A 4-in-1 ESC design, INAV firmware experiments, and Blackbox-based PID/filter tuning tools.",
+  "projects": [
+    {
+      "name": "SkyPilot H743",
+      "url": "https://19379353560.github.io/skypilot.html",
+      "repository": "https://github.com/19379353560/skypilot",
+      "review": "https://github.com/19379353560/skypilot/issues/1",
+      "summary": "Open STM32H743 INAV flight-controller hardware with ICM42688P IMU, EasyEDA Pro files, INAV firmware files, and PCB review requests."
+    },
+    {
+      "name": "75A 4-in-1 ESC",
+      "url": "https://19379353560.github.io/esc.html",
+      "repository": "https://github.com/19379353560/DIY_Flight_Controller_and_4in1_ESC",
+      "review": "https://github.com/19379353560/DIY_Flight_Controller_and_4in1_ESC/issues/1",
+      "summary": "Open FPV ESC hardware project with Gerbers, schematic PDF, PCB previews, DSHOT600 notes, and high-current review requests."
+    },
+    {
+      "name": "INAV PID Tuner",
+      "url": "https://19379353560.github.io/pid-tuner.html",
+      "repository": "https://github.com/19379353560/inav-pid-tuner",
+      "review": "https://github.com/19379353560/inav-pid-tuner/issues/1",
+      "summary": "FastAPI tool for analyzing INAV Blackbox logs and generating cautious PID/filter tuning suggestions."
+    },
+    {
+      "name": "INAV D-term pre-diff LPF",
+      "url": "https://19379353560.github.io/inav-dterm-lpf.html",
+      "repository": "https://github.com/19379353560/inav",
+      "review": "https://github.com/19379353560/inav/issues/1",
+      "upstream_pr": "https://github.com/iNavFlight/inav/pull/11464",
+      "summary": "Optional D-term pre-differentiation low-pass filter work for INAV, with green CI and flight-test log requests."
+    }
+  ]
+}

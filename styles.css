@@ -411,6 +411,35 @@ h3 {
   color: var(--muted);
 }
 
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 42px 0 72px;
+}
+
+.press-card {
+  display: grid;
+  gap: 12px;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.press-card h2 {
+  font-size: 26px;
+}
+
+.press-card p {
+  color: var(--muted);
+}
+
+.press-card code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 760px) {
   .topbar {
     align-items: flex-start;
@@ -432,7 +461,8 @@ h3 {
 
   .project-grid,
   .feedback,
-  .detail-layout {
+  .detail-layout,
+  .press-grid {
     grid-template-columns: 1fr;
   }
 }
