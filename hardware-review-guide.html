@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FPV hardware review checklist for flight-controller PCB design, IMU wiring, high-current ESC routing, and safe bench testing.">
+    <link rel="canonical" href="https://19379353560.github.io/hardware-review-guide.html">
+    <meta property="og:title" content="FPV Hardware Review Checklist">
+    <meta property="og:description" content="Review checklist for flight-controller PCB design, IMU wiring, ESC current paths, and safe bring-up.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://19379353560.github.io/hardware-review-guide.html">
+    <meta property="og:image" content="https://19379353560.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>FPV Hardware Review Checklist</title>
+    <link rel="alternate" type="application/rss+xml" title="FPV Flight-Control Lab updates" href="https://19379353560.github.io/feed.xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">FPV Flight-Control Lab</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/#projects">Projects</a>
+        <a href="/#feedback">Feedback</a>
+        <a href="/guides.html">Guides</a>
+        <a href="/updates.html">Updates</a>
+        <a href="/press-kit.html">Press Kit</a>
+        <a href="https://github.com/19379353560">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-hero">
+        <div>
+          <p class="eyebrow">Hardware Review</p>
+          <h1>FPV flight-controller and ESC review checklist.</h1>
+          <p class="lead">Use this when reviewing SkyPilot H743, the 75A 4-in-1 ESC, or comparable FPV hardware designs.</p>
+        </div>
+      </section>
+
+      <section class="detail-layout">
+        <div class="detail-main">
+          <article class="detail-block">
+            <h2>Flight-Controller Review</h2>
+            <ul>
+              <li>Confirm power rails, regulator headroom, decoupling, and boot behavior.</li>
+              <li>Check IMU SPI routing, DRDY wiring, interrupt assumptions, and ground return paths.</li>
+              <li>Review USB, UART, GPS, barometer, buzzer, LED, receiver, and motor outputs against the INAV target.</li>
+              <li>Look for vibration coupling, IMU mounting risks, and nearby switching-noise sources.</li>
+            </ul>
+          </article>
+
+          <article class="detail-block">
+            <h2>ESC Review</h2>
+            <ul>
+              <li>Trace battery input, phase output, MOSFET, gate-driver, and current-return paths.</li>
+              <li>Check switching-loop area, gate resistance assumptions, bootstrap routing, and thermal bottlenecks.</li>
+              <li>Review DSHOT signal routing, ground reference, connector placement, and assembly risks.</li>
+              <li>Flag anything that needs bench testing before high-current load.</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="detail-side">
+          <div class="link-list">
+            <a href="https://github.com/19379353560/skypilot/issues/1">SkyPilot review issue</a>
+            <a href="https://github.com/19379353560/DIY_Flight_Controller_and_4in1_ESC/issues/1">ESC review issue</a>
+            <a href="skypilot.html">SkyPilot project page</a>
+            <a href="esc.html">ESC project page</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>19379353560 · FPV flight-control hardware and INAV experiments</span>
+      <a href="https://github.com/19379353560">github.com/19379353560</a>
+    </footer>
+  </body>
+</html>

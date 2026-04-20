@@ -8,6 +8,8 @@ GitHub user 19379353560.
 
 - Portfolio: https://19379353560.github.io/
 - Updates: https://19379353560.github.io/updates.html
+- Guides: https://19379353560.github.io/guides.html
+- Press kit: https://19379353560.github.io/press-kit.html
 
 ## Projects
 
@@ -41,3 +43,12 @@ GitHub user 19379353560.
 
 The most useful feedback is hardware review, safe bench-test notes, anonymized
 INAV Blackbox logs, and flight-test comparisons for `dterm_lpf2_hz`.
+
+## Guides
+
+- FPV hardware review checklist:
+  https://19379353560.github.io/hardware-review-guide.html
+- INAV Blackbox log sharing guide:
+  https://19379353560.github.io/blackbox-log-sharing.html
+- INAV D-term pre-diff LPF flight-test guide:
+  https://19379353560.github.io/dterm-flight-test-guide.html

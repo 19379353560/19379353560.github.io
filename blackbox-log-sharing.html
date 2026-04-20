@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guide for safely sharing INAV Blackbox logs for PID tuning, filter tuning, D-term noise review, and gyro noise validation.">
+    <link rel="canonical" href="https://19379353560.github.io/blackbox-log-sharing.html">
+    <meta property="og:title" content="INAV Blackbox Log Sharing Guide">
+    <meta property="og:description" content="How to share useful INAV Blackbox logs while protecting private GPS and setup data.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://19379353560.github.io/blackbox-log-sharing.html">
+    <meta property="og:image" content="https://19379353560.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>INAV Blackbox Log Sharing Guide</title>
+    <link rel="alternate" type="application/rss+xml" title="FPV Flight-Control Lab updates" href="https://19379353560.github.io/feed.xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">FPV Flight-Control Lab</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/#projects">Projects</a>
+        <a href="/#feedback">Feedback</a>
+        <a href="/guides.html">Guides</a>
+        <a href="/updates.html">Updates</a>
+        <a href="/press-kit.html">Press Kit</a>
+        <a href="https://github.com/19379353560">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-hero">
+        <div>
+          <p class="eyebrow">Blackbox Logs</p>
+          <h1>Share INAV Blackbox logs that are useful and privacy-aware.</h1>
+          <p class="lead">Good logs make PID/filter recommendations easier to validate and compare across aircraft.</p>
+        </div>
+      </section>
+
+      <section class="detail-layout">
+        <div class="detail-main">
+          <article class="detail-block">
+            <h2>Include</h2>
+            <ul>
+              <li>Aircraft type, size, props, motors, battery, and firmware version.</li>
+              <li>PID and filter profile used for the flight.</li>
+              <li>Short description of the flight pattern and vibration symptoms.</li>
+              <li>Before/after logs when comparing a filter or PID change.</li>
+            </ul>
+          </article>
+
+          <article class="detail-block">
+            <h2>Remove Or Avoid</h2>
+            <ul>
+              <li>Private GPS/home-position data when logs are public.</li>
+              <li>Personal location notes, pilot identity, or sensitive flight areas.</li>
+              <li>Large unrelated files when screenshots or summary metrics are enough.</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="detail-side">
+          <div class="link-list">
+            <a href="https://github.com/19379353560/inav-pid-tuner/issues/1">Share PID Tuner logs</a>
+            <a href="https://github.com/19379353560/inav/issues/1">Share D-term LPF logs</a>
+            <a href="pid-tuner.html">INAV PID Tuner page</a>
+            <a href="dterm-flight-test-guide.html">D-term flight-test guide</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>19379353560 · FPV flight-control hardware and INAV experiments</span>
+      <a href="https://github.com/19379353560">github.com/19379353560</a>
+    </footer>
+  </body>
+</html>

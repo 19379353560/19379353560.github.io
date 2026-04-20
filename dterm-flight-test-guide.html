@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Conservative INAV D-term pre-diff LPF flight-test guide for comparing disabled, 200Hz, and 250Hz settings with Blackbox logs.">
+    <link rel="canonical" href="https://19379353560.github.io/dterm-flight-test-guide.html">
+    <meta property="og:title" content="INAV D-term Pre-Diff LPF Flight-Test Guide">
+    <meta property="og:description" content="How to collect comparable Blackbox logs for dterm_lpf2_hz testing.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://19379353560.github.io/dterm-flight-test-guide.html">
+    <meta property="og:image" content="https://19379353560.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>INAV D-term Pre-Diff LPF Flight-Test Guide</title>
+    <link rel="alternate" type="application/rss+xml" title="FPV Flight-Control Lab updates" href="https://19379353560.github.io/feed.xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">FPV Flight-Control Lab</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/#projects">Projects</a>
+        <a href="/#feedback">Feedback</a>
+        <a href="/guides.html">Guides</a>
+        <a href="/updates.html">Updates</a>
+        <a href="/press-kit.html">Press Kit</a>
+        <a href="https://github.com/19379353560">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-hero">
+        <div>
+          <p class="eyebrow">Flight Test</p>
+          <h1>Collect comparable logs for INAV D-term pre-diff LPF testing.</h1>
+          <p class="lead">Keep the test conservative, change one setting at a time, and stop if motors heat up or behavior changes unexpectedly.</p>
+        </div>
+      </section>
+
+      <section class="detail-layout">
+        <div class="detail-main">
+          <article class="detail-block">
+            <h2>Suggested Sequence</h2>
+            <ul>
+              <li>Record a baseline with `dterm_lpf2_hz = 0`.</li>
+              <li>Repeat the same conservative flight pattern with 200Hz.</li>
+              <li>Repeat only if safe with 250Hz.</li>
+              <li>Capture Blackbox logs and motor temperature notes after each run.</li>
+            </ul>
+          </article>
+
+          <article class="detail-block">
+            <h2>Report Back</h2>
+            <ul>
+              <li>Aircraft size, props, motors, battery, firmware commit, and tune profile.</li>
+              <li>D-term noise, gyro noise, and motor-temperature observations.</li>
+              <li>Any unexpected behavior when changing PID/filter profiles.</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="detail-side">
+          <div class="link-list">
+            <a href="https://github.com/iNavFlight/inav/pull/11464">Active upstream PR</a>
+            <a href="https://github.com/19379353560/inav/issues/1">Flight-test issue</a>
+            <a href="blackbox-log-sharing.html">Blackbox log guide</a>
+            <a href="inav-dterm-lpf.html">D-term project page</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>19379353560 · FPV flight-control hardware and INAV experiments</span>
+      <a href="https://github.com/19379353560">github.com/19379353560</a>
+    </footer>
+  </body>
+</html>
