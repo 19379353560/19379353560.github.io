@@ -3,6 +3,7 @@
   "url": "https://19379353560.github.io/",
   "github": "https://github.com/19379353560",
   "summary": "Open FPV flight-controller hardware, a 75A 4-in-1 ESC design, INAV firmware experiments, and Blackbox-based PID/filter tuning tools.",
+  "contribute": "https://19379353560.github.io/contribute.html",
   "guides": [
     {
       "name": "FPV hardware review checklist",

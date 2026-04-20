@@ -10,6 +10,7 @@ GitHub user 19379353560.
 - Updates: https://19379353560.github.io/updates.html
 - Guides: https://19379353560.github.io/guides.html
 - Press kit: https://19379353560.github.io/press-kit.html
+- Contribute: https://19379353560.github.io/contribute.html
 
 ## Projects
 
@@ -41,6 +42,7 @@ GitHub user 19379353560.
 
 ## Contribution Requests
 
+The main contribution hub is https://19379353560.github.io/contribute.html.
 The most useful feedback is hardware review, safe bench-test notes, anonymized
 INAV Blackbox logs, and flight-test comparisons for `dterm_lpf2_hz`.
 

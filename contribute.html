@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contribution paths for FPV hardware reviewers, INAV pilots, ESC designers, and Blackbox log testers.">
+    <link rel="canonical" href="https://19379353560.github.io/contribute.html">
+    <meta property="og:title" content="Contribute to FPV Flight-Control Lab">
+    <meta property="og:description" content="Good-first issues, review requests, and log-sharing paths for FPV and INAV contributors.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://19379353560.github.io/contribute.html">
+    <meta property="og:image" content="https://19379353560.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Contribute to FPV Flight-Control Lab</title>
+    <link rel="alternate" type="application/rss+xml" title="FPV Flight-Control Lab updates" href="https://19379353560.github.io/feed.xml">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ItemList",
+            "name": "FPV Flight-Control Lab contribution paths",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "SkyPilot H743 connector and bring-up documentation",
+                "url": "https://github.com/19379353560/skypilot/issues/3"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "75A 4-in-1 ESC annotated PCB and bench-test documentation",
+                "url": "https://github.com/19379353560/DIY_Flight_Controller_and_4in1_ESC/issues/3"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "INAV PID Tuner Blackbox log anonymization and demo data",
+                "url": "https://github.com/19379353560/inav-pid-tuner/issues/3"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "INAV D-term LPF flight-test procedure and Blackbox comparison template",
+                "url": "https://github.com/19379353560/inav/issues/3"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the most useful contribution?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Specific review notes, anonymized Blackbox logs, reproducible bench-test observations, and small documentation pull requests are the most useful contributions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do contributors need hardware?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Some tasks need hardware experience, but documentation, connector tables, log-sharing checklists, sample data, and review notes can be contributed without building the boards."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">FPV Flight-Control Lab</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/#projects">Projects</a>
+        <a href="/#feedback">Feedback</a>
+        <a href="/guides.html">Guides</a>
+        <a href="/updates.html">Updates</a>
+        <a href="/press-kit.html">Press Kit</a>
+        <a href="/contribute.html">Contribute</a>
+        <a href="https://github.com/19379353560">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-hero">
+        <div>
+          <p class="eyebrow">Contribute</p>
+          <h1>Useful FPV feedback paths for hardware reviewers, INAV pilots, and Blackbox log testers.</h1>
+          <p class="lead">Pick a focused issue, add reproducible notes, or share anonymized logs that make the next firmware and hardware revision easier to validate.</p>
+          <div class="actions" aria-label="Contribution shortcuts">
+            <a class="button primary" href="#good-first-issues">Good First Issues</a>
+            <a class="button secondary" href="#review-requests">Review Requests</a>
+          </div>
+        </div>
+        <img src="https://raw.githubusercontent.com/19379353560/19379353560/main/assets/profile-cover.svg" alt="FPV flight-control hardware and firmware contribution banner">
+      </section>
+
+      <section id="good-first-issues" class="press-grid" aria-label="Good first issues">
+        <article class="press-card">
+          <h2>SkyPilot H743</h2>
+          <p>Connector tables, safe bring-up notes, IMU wiring review, grounding review, and INAV target documentation.</p>
+          <a class="back-link" href="https://github.com/19379353560/skypilot/issues/3">Connector and pinout table</a>
+          <a class="back-link" href="https://github.com/19379353560/skypilot/issues/4">Board bring-up checklist</a>
+        </article>
+
+        <article class="press-card">
+          <h2>75A 4-in-1 ESC</h2>
+          <p>Annotated PCB screenshots, high-current routing review, thermal assumptions, MOSFET notes, and safe bench-test wording.</p>
+          <a class="back-link" href="https://github.com/19379353560/DIY_Flight_Controller_and_4in1_ESC/issues/3">Annotated PCB screenshots</a>
+          <a class="back-link" href="https://github.com/19379353560/DIY_Flight_Controller_and_4in1_ESC/issues/4">ESC bench-test checklist</a>
+        </article>
+
+        <article class="press-card">
+          <h2>INAV PID Tuner</h2>
+          <p>Blackbox log anonymization, sample metrics, validation logs, cautious rule feedback, and demo-mode test cases.</p>
+          <a class="back-link" href="https://github.com/19379353560/inav-pid-tuner/issues/3">Log anonymization checklist</a>
+          <a class="back-link" href="https://github.com/19379353560/inav-pid-tuner/issues/4">Demo mode with sample metrics</a>
+        </article>
+
+        <article class="press-card">
+          <h2>INAV D-term LPF</h2>
+          <p>Flight-test procedure wording, Blackbox comparison templates, noisy-frame logs, and feedback on default-disabled filter behavior.</p>
+          <a class="back-link" href="https://github.com/19379353560/inav/issues/3">Flight-test procedure</a>
+          <a class="back-link" href="https://github.com/19379353560/inav/issues/4">Blackbox comparison template</a>
+        </article>
+      </section>
+
+      <section id="review-requests" class="feedback" aria-labelledby="review-title">
+        <div>
+          <p class="eyebrow">Review Requests</p>
+          <h2 id="review-title">Focused feedback beats broad encouragement.</h2>
+        </div>
+        <div class="feedback-list">
+          <a href="https://github.com/19379353560/skypilot/issues/1">Review SkyPilot H743 PCB layout, ICM42688P DRDY wiring, grounding, and vibration assumptions</a>
+          <a href="https://github.com/19379353560/DIY_Flight_Controller_and_4in1_ESC/issues/1">Review the 75A ESC high-current path, MOSFET/gate-driver placement, and thermal assumptions</a>
+          <a href="https://github.com/19379353560/inav-pid-tuner/issues/1">Share anonymized INAV Blackbox logs and tuning-rule feedback</a>
+          <a href="https://github.com/19379353560/inav/issues/1">Share D-term LPF flight-test logs and noisy-frame comparisons</a>
+        </div>
+      </section>
+
+      <section class="feedback" aria-labelledby="include-title">
+        <div>
+          <p class="eyebrow">What Helps</p>
+          <h2 id="include-title">Attach the evidence that makes feedback reproducible.</h2>
+        </div>
+        <div class="feedback-list">
+          <a href="hardware-review-guide.html">Hardware notes: board area, current path, connector, component, thermal, and grounding observations</a>
+          <a href="blackbox-log-sharing.html">Blackbox logs: anonymized files, aircraft class, firmware version, filter settings, and flight condition notes</a>
+          <a href="dterm-flight-test-guide.html">Flight tests: disabled, 200Hz, and 250Hz `dterm_lpf2_hz` comparisons on the same frame</a>
+          <a href="press-kit.html">Shareable links: project descriptions, review requests, and concise copy for forums or communities</a>
+        </div>
+      </section>
+
+      <section class="update-list" aria-label="Shareable request">
+        <article class="update-item">
+          <time datetime="2026-04-20">Shareable request</time>
+          <h2>FPV reviewers and INAV pilots wanted</h2>
+          <p>I am collecting focused review notes for open FPV flight-control hardware, a 75A 4-in-1 ESC design, an INAV Blackbox PID/filter tuning tool, and an upstream INAV D-term pre-diff LPF PR.</p>
+          <p>Useful help includes PCB review, ESC power-stage review, anonymized Blackbox logs, and controlled D-term LPF flight-test comparisons.</p>
+          <p><a href="https://19379353560.github.io/contribute.html">https://19379353560.github.io/contribute.html</a></p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>19379353560 · FPV flight-control hardware and INAV experiments</span>
+      <a href="https://github.com/19379353560">github.com/19379353560</a>
+    </footer>
+  </body>
+</html>

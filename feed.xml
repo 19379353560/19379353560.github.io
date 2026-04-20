@@ -7,6 +7,13 @@
     <language>en</language>
     <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0800</lastBuildDate>
     <item>
+      <title>Contribution hub published</title>
+      <link>https://19379353560.github.io/contribute.html</link>
+      <guid>https://19379353560.github.io/contribute.html#2026-04-20-contribute</guid>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0800</pubDate>
+      <description>A single contribution page now links good-first issues, hardware review requests, Blackbox log requests, and D-term LPF flight-test paths.</description>
+    </item>
+    <item>
       <title>Guides published for hardware review, Blackbox logs, and D-term LPF testing</title>
       <link>https://19379353560.github.io/guides.html</link>
       <guid>https://19379353560.github.io/guides.html#2026-04-20-guides</guid>
