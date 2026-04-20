@@ -382,6 +382,35 @@ h3 {
   text-underline-offset: 4px;
 }
 
+.update-list {
+  display: grid;
+  gap: 22px;
+  padding: 42px 0 72px;
+}
+
+.update-item {
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.update-item time {
+  color: var(--teal);
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.update-item h2 {
+  margin-top: 8px;
+}
+
+.update-item p,
+.update-item li {
+  color: var(--muted);
+}
+
 @media (max-width: 760px) {
   .topbar {
     align-items: flex-start;

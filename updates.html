@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Updates for FPV Flight-Control Lab: SkyPilot H743, 75A 4-in-1 ESC, INAV PID Tuner, and INAV D-term pre-diff LPF work.">
+    <link rel="canonical" href="https://19379353560.github.io/updates.html">
+    <meta property="og:title" content="FPV Flight-Control Lab Updates">
+    <meta property="og:description" content="Project updates, review requests, releases, and flight-test needs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://19379353560.github.io/updates.html">
+    <meta property="og:image" content="https://19379353560.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>FPV Flight-Control Lab Updates</title>
+    <link rel="alternate" type="application/rss+xml" title="FPV Flight-Control Lab updates" href="https://19379353560.github.io/feed.xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">FPV Flight-Control Lab</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/#projects">Projects</a>
+        <a href="/#feedback">Feedback</a>
+        <a href="/updates.html">Updates</a>
+        <a href="https://github.com/19379353560">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-hero">
+        <div>
+          <p class="eyebrow">Updates</p>
+          <h1>Review snapshots, flight-test requests, and project progress.</h1>
+          <p class="lead">A short changelog for the FPV flight-control hardware, INAV firmware, and Blackbox tuning projects.</p>
+          <a class="back-link" href="feed.xml">RSS feed</a>
+        </div>
+      </section>
+
+      <section class="update-list" aria-label="Project updates">
+        <article class="update-item">
+          <time datetime="2026-04-20">April 20, 2026</time>
+          <h2>Good-first-issue and review paths opened</h2>
+          <p>New documentation and validation issues were added so contributors can help without needing to build hardware first.</p>
+          <ul>
+            <li>SkyPilot H743 pinout and bring-up checklist tasks.</li>
+            <li>75A ESC annotated PCB screenshot and bench-test checklist tasks.</li>
+            <li>INAV PID Tuner log anonymization and demo-mode tasks.</li>
+            <li>INAV D-term LPF flight-test procedure and Blackbox comparison template tasks.</li>
+          </ul>
+        </article>
+
+        <article class="update-item">
+          <time datetime="2026-04-19">April 19, 2026</time>
+          <h2>Review snapshots and project pages published</h2>
+          <p>Review snapshot releases and dedicated project pages were published for SkyPilot H743, the 75A 4-in-1 ESC, INAV PID Tuner, and the INAV D-term pre-diff LPF work.</p>
+          <ul>
+            <li><a href="skypilot.html">SkyPilot H743 project page</a></li>
+            <li><a href="esc.html">75A 4-in-1 ESC project page</a></li>
+            <li><a href="pid-tuner.html">INAV PID Tuner project page</a></li>
+            <li><a href="inav-dterm-lpf.html">INAV D-term pre-diff LPF project page</a></li>
+          </ul>
+        </article>
+
+        <article class="update-item">
+          <time datetime="2026-04-19">April 19, 2026</time>
+          <h2>INAV D-term LPF PR checks are green</h2>
+          <p>The active upstream INAV PR is clean and mergeable. The feature now defaults to disabled, uses the generated setting default, and initializes the pre-diff filter from the current gyro rate on re-init.</p>
+          <p><a href="https://github.com/iNavFlight/inav/pull/11464">View PR #11464</a></p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>19379353560 · FPV flight-control hardware and INAV experiments</span>
+      <a href="https://github.com/19379353560">github.com/19379353560</a>
+    </footer>
+  </body>
+</html>

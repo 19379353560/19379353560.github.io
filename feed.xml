@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>FPV Flight-Control Lab Updates</title>
+    <link>https://19379353560.github.io/updates.html</link>
+    <description>Updates for FPV flight-control hardware, INAV firmware experiments, and Blackbox tuning tools.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0800</lastBuildDate>
+    <item>
+      <title>Good-first-issue and review paths opened</title>
+      <link>https://19379353560.github.io/updates.html</link>
+      <guid>https://19379353560.github.io/updates.html#2026-04-20-good-first-issues</guid>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0800</pubDate>
+      <description>New documentation and validation issues were added for SkyPilot H743, the 75A ESC, INAV PID Tuner, and INAV D-term LPF flight testing.</description>
+    </item>
+    <item>
+      <title>Review snapshots and project pages published</title>
+      <link>https://19379353560.github.io/updates.html</link>
+      <guid>https://19379353560.github.io/updates.html#2026-04-19-review-snapshots</guid>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0800</pubDate>
+      <description>Review snapshot releases and dedicated project pages were published for the core FPV and INAV projects.</description>
+    </item>
+    <item>
+      <title>INAV D-term LPF PR checks are green</title>
+      <link>https://github.com/iNavFlight/inav/pull/11464</link>
+      <guid>https://github.com/iNavFlight/inav/pull/11464</guid>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0800</pubDate>
+      <description>The active upstream INAV PR is clean and mergeable, with the feature disabled by default and docs checks passing.</description>
+    </item>
+  </channel>
+</rss>
