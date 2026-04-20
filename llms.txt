@@ -11,6 +11,8 @@ GitHub user 19379353560.
 - Guides: https://19379353560.github.io/guides.html
 - Press kit: https://19379353560.github.io/press-kit.html
 - Contribute: https://19379353560.github.io/contribute.html
+- D-term pre-diff LPF technical note:
+  https://19379353560.github.io/dterm-prefilter-technical-note.html
 
 ## Projects
 
@@ -54,3 +56,5 @@ INAV Blackbox logs, and flight-test comparisons for `dterm_lpf2_hz`.
   https://19379353560.github.io/blackbox-log-sharing.html
 - INAV D-term pre-diff LPF flight-test guide:
   https://19379353560.github.io/dterm-flight-test-guide.html
+- INAV D-term pre-diff LPF technical note:
+  https://19379353560.github.io/dterm-prefilter-technical-note.html

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Technical note on INAV D-term pre-differentiation low-pass filtering, why the feature defaults disabled, and how to collect useful Blackbox comparison logs.">
+    <link rel="canonical" href="https://19379353560.github.io/dterm-prefilter-technical-note.html">
+    <meta property="og:title" content="INAV D-term Pre-Diff LPF Technical Note">
+    <meta property="og:description" content="A focused explanation of the INAV D-term pre-diff LPF PR, test settings, and Blackbox log requests.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://19379353560.github.io/dterm-prefilter-technical-note.html">
+    <meta property="og:image" content="https://19379353560.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>INAV D-term Pre-Diff LPF Technical Note</title>
+    <link rel="alternate" type="application/rss+xml" title="FPV Flight-Control Lab updates" href="https://19379353560.github.io/feed.xml">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "INAV D-term Pre-Diff LPF Technical Note",
+        "description": "Technical note on the INAV D-term pre-differentiation low-pass filter PR, validation needs, and Blackbox log comparison procedure.",
+        "author": {
+          "@type": "Person",
+          "name": "19379353560",
+          "url": "https://github.com/19379353560"
+        },
+        "datePublished": "2026-04-20",
+        "dateModified": "2026-04-20",
+        "mainEntityOfPage": "https://19379353560.github.io/dterm-prefilter-technical-note.html",
+        "about": [
+          "INAV firmware",
+          "D-term filtering",
+          "Blackbox logs",
+          "FPV flight tuning"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">FPV Flight-Control Lab</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/#projects">Projects</a>
+        <a href="/#feedback">Feedback</a>
+        <a href="/guides.html">Guides</a>
+        <a href="/updates.html">Updates</a>
+        <a href="/press-kit.html">Press Kit</a>
+        <a href="/contribute.html">Contribute</a>
+        <a href="https://github.com/19379353560">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-hero">
+        <div>
+          <p class="eyebrow">Technical Note</p>
+          <h1>INAV D-term pre-diff LPF: what changed, why it is disabled by default, and what logs are useful.</h1>
+          <p class="lead">A focused note for pilots and reviewers who want to validate `dterm_lpf2_hz` with comparable Blackbox data instead of guesswork.</p>
+          <div class="actions" aria-label="Technical note links">
+            <a class="button primary" href="https://github.com/iNavFlight/inav/pull/11464">Review PR #11464</a>
+            <a class="button secondary" href="dterm-flight-test-guide.html">Flight-Test Guide</a>
+          </div>
+        </div>
+        <img src="https://raw.githubusercontent.com/19379353560/inav/master/assets/cover.svg" alt="INAV D-term pre-diff LPF technical banner">
+      </section>
+
+      <section class="detail-layout">
+        <div class="detail-main">
+          <article class="detail-block">
+            <h2>Short Version</h2>
+            <p>The PR adds an optional low-pass filter before the derivative step used by D-term. The goal is to reduce high-frequency gyro noise before differentiation amplifies it. The feature currently defaults to disabled, so existing tunes keep their current behavior unless a pilot explicitly tests the new setting.</p>
+          </article>
+
+          <article class="detail-block">
+            <h2>Why The Filter Is Before Differentiation</h2>
+            <p>D-term reacts to rate of change. That makes it useful for damping fast motion, but it also makes high-frequency gyro noise more expensive: noise changes quickly, and a derivative operation can make that noise look larger. Filtering the input before the derivative step is a conservative way to reduce the noise that reaches D-term.</p>
+          </article>
+
+          <article class="detail-block">
+            <h2>Current Implementation State</h2>
+            <ul>
+              <li>The active upstream PR is <a href="https://github.com/iNavFlight/inav/pull/11464">iNavFlight/inav#11464</a>.</li>
+              <li>The setting is `dterm_lpf2_hz`.</li>
+              <li>The default is `0`, so the feature is disabled unless the pilot enables it.</li>
+              <li>The pre-diff PT1 filter state is initialized from the current gyro rate on filter re-init to avoid a one-cycle D-term spike.</li>
+              <li>The generated settings documentation has been updated.</li>
+            </ul>
+          </article>
+
+          <article class="detail-block">
+            <h2>Test Values</h2>
+            <p>The useful comparison is not just enabled versus disabled. The most useful logs use the same frame, propellers, battery class, PID profile, weather, and flight style while changing only `dterm_lpf2_hz`.</p>
+            <ul>
+              <li>`set dterm_lpf2_hz = 0` for baseline behavior.</li>
+              <li>`set dterm_lpf2_hz = 200` for a conservative enabled pass.</li>
+              <li>`set dterm_lpf2_hz = 250` for a less aggressive filter pass.</li>
+            </ul>
+          </article>
+
+          <article class="detail-block">
+            <h2>What To Measure</h2>
+            <ul>
+              <li>D-term noise in the Blackbox log.</li>
+              <li>Gyro noise before and after the comparison change.</li>
+              <li>Motor temperature after hover and active flight.</li>
+              <li>Propwash recovery or bounce-back behavior if visible in the log.</li>
+              <li>Any change when switching PID or filter profiles.</li>
+            </ul>
+          </article>
+
+          <article class="detail-block">
+            <h2>Useful Comment Format</h2>
+            <p>Attach logs or screenshots to the flight-test issue and include enough context for another pilot to compare the result.</p>
+            <ul>
+              <li>INAV version or PR build commit.</li>
+              <li>Target board and aircraft type.</li>
+              <li>Prop size, battery class, and motor class.</li>
+              <li>Filter settings before the test.</li>
+              <li>Three logs: disabled, 200Hz, and 250Hz when possible.</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="detail-side">
+          <div class="stat-list">
+            <div><strong>Feature</strong>D-term pre-diff LPF</div>
+            <div><strong>Setting</strong>`dterm_lpf2_hz`</div>
+            <div><strong>Default</strong>0, disabled</div>
+            <div><strong>Need</strong>Comparable Blackbox logs</div>
+          </div>
+          <div class="link-list">
+            <a href="https://github.com/iNavFlight/inav/pull/11464">Upstream PR #11464</a>
+            <a href="https://github.com/iNavFlight/inav/discussions/11463">Official INAV discussion</a>
+            <a href="https://github.com/19379353560/inav/issues/1">Flight-test request</a>
+            <a href="https://github.com/19379353560/inav/issues/4">Blackbox comparison template</a>
+            <a href="blackbox-log-sharing.html">Blackbox log sharing guide</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>19379353560 · FPV flight-control hardware and INAV experiments</span>
+      <a href="https://github.com/19379353560">github.com/19379353560</a>
+    </footer>
+  </body>
+</html>

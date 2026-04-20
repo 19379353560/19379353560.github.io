@@ -7,6 +7,13 @@
     <language>en</language>
     <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0800</lastBuildDate>
     <item>
+      <title>D-term pre-diff LPF technical note published</title>
+      <link>https://19379353560.github.io/dterm-prefilter-technical-note.html</link>
+      <guid>https://19379353560.github.io/dterm-prefilter-technical-note.html#2026-04-20-technical-note</guid>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0800</pubDate>
+      <description>A focused note explains the INAV D-term pre-diff LPF PR, why the feature defaults disabled, and what Blackbox comparison logs are useful.</description>
+    </item>
+    <item>
       <title>Contribution hub published</title>
       <link>https://19379353560.github.io/contribute.html</link>
       <guid>https://19379353560.github.io/contribute.html#2026-04-20-contribute</guid>

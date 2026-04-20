@@ -16,6 +16,10 @@
     {
       "name": "INAV D-term pre-diff LPF flight-test guide",
       "url": "https://19379353560.github.io/dterm-flight-test-guide.html"
+    },
+    {
+      "name": "INAV D-term pre-diff LPF technical note",
+      "url": "https://19379353560.github.io/dterm-prefilter-technical-note.html"
     }
   ],
   "projects": [
